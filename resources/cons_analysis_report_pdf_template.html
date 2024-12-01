@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8"></meta>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
+
+<!-- Bootstrap CSS -->
+
+<title>Commercial Bank CRIB Report</title>
+<style>
+@page land {
+	size: A4 landscape;
+}
+
+body {
+	font-family: sans-serif;
+	color: #3e3e3e;
+	page: land;
+	width: 1010px;
+	font-size: 10px;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.bg-light {
+	background-color: #f8f9fa !important;
+}
+
+.color-light {
+	color: #000000;
+}
+
+.p-5 {
+	padding: 3rem !important;
+}
+
+.mt-0 {
+	margin-top: 0 !important;
+}
+
+.mt-4 {
+	margin-top: 1.5rem !important;
+}
+
+.mt-5 {
+	margin-top: 2rem !important;
+}
+
+.mb-1 {
+	margin-bottom: 1rem !important;
+}
+
+.ml-4 {
+	margin-left: 2.5rem !important;
+}
+
+.bg-white {
+	background-color: #fff !important;
+}
+
+.container {
+	max-width: 1250px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.bg-primary {
+	text-align: center;
+}
+
+.checkbox-container {
+	display: flex;
+}
+
+.bg-dark {
+	background-color: #343a40 !important;
+}
+
+.text-white {
+	color: #fff !important;
+}
+
+.p-4 {
+	padding: 1.5rem !important;
+}
+
+.pt-0 {
+	padding-top: 0 !important;
+}
+
+.p-3 {
+	padding: 1rem !important;
+}
+
+.mb-5, .my-5 {
+	margin-bottom: 2rem !important;
+}
+
+.mb-4 {
+	margin-bottom: 1.5rem !important;
+}
+
+.table {
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 1rem;
+	background-color: transparent;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+.table thead th {
+	vertical-align: bottom;
+	border-bottom: 2px solid #dee2e6;
+	text-align: left;
+}
+
+.table td, .table th {
+	padding: .75rem;
+	vertical-align: top;
+	border-top: 1px solid #dee2e6;
+	text-align: left;
+}
+
+.table-bordered {
+	border: 1px solid #dee2e6;
+}
+
+.table-bordered thead td, .table-bordered thead th {
+	border-bottom-width: 2px;
+}
+
+.table-bordered td, .table-bordered th {
+	border: 1px solid #dee2e6;
+}
+
+.text-center {
+	text-align: center !important;
+}
+
+.w-75 {
+	width: 75%;
+	padding: 0 10px;
+}
+
+.w-25 {
+	width: 25%;
+}
+
+.w-50 {
+	width: 50%;
+	align-items: center;
+	padding: 0 10px;
+}
+
+.w-50 .d-flex {
+	align-items: center;
+}
+
+.w-100 {
+	align-items: center;
+	margin: 0 10px;
+	display: inline-block;
+	width: -webkit-fill-available;
+}
+
+.mr-auto {
+	margin-right: auto;
+}
+
+.flex-start {
+	justify-content: space-between;
+}
+
+.space-between {
+	justify-content: space-between;
+}
+
+label {
+	width: 70%;
+}
+
+input {
+	width: 100%;
+	height: 25px;
+}
+
+textarea {
+	width: 100%;
+	margin-top: 1rem;
+}
+
+.border-orange {
+	border: 1px solid #f4af3f;
+}
+
+.border-orange h4 {
+	border-bottom: 2px solid #f4af3f;
+	padding: 0 15px 15px 15px;
+}
+
+.color-red {
+	color: #900000;
+}
+
+.mb-0 {
+	margin-bottom: 0 !important;
+}
+
+.color-gray {
+	background: #ccc;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    font: 20px Arial, sans-serif;
+    margin: auto;
+}
+</style>
+</head>
+
+<body class="bg-light">
+	<section>
+		<div class="container mt-5 p-5 bg-white">
+			<table width="100%" style="border: 1px solid #dee2e6">
+				<tbody>
+					<tr>
+						<td style="padding-left: 30px;">
+							<div class="mr-auto ml-4">
+								<p class="color-light"><strong style="font-size: 16px;">CRIB Analysis for Credit Facility Evaluation - Personal</strong></p>
+							</div>
+						</td>
+						<td style="text-align: right; padding-right: 30px;"><img width="220" src="data:image/png;base64,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" alt="logo-image"></img></td>					
+					</tr>
+				</tbody>
+			</table>
+			<br></br><br></br>
+			<div class="w-100">
+				<table width="100%">
+					<tr>
+						<td>
+							<table class="table table-bordered">
+								<tbody>
+									<tr>
+										<th class="color-gray" scope="row" width="50%">Request Number</th>
+										<td scope="row" width="50%">[[${requestNumber}]]</td>
+									</tr>
+									<tr>
+										<th class="color-gray" scope="row" width="50%">CRIB Report Number</th>
+										<td scope="row" width="50%">[[${CRIBReportNumber}]]</td>
+									</tr>
+									<tr>
+										<th class="color-gray" scope="row" width="50%">CRIB Report Order Date</th>
+										<td scope="row" width="50%">[[${CRIBOrderDate}]]</td>
+									</tr>
+								</tbody>
+							</table>
+							<br></br><br></br>
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th class="color-red" scope="col" colspan="2" width="100%">Consumer Profile</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th class="color-gray" scope="row" width="50%">Full Name</th>
+										<td scope="row" width="50%">[[${fullName}]]</td>
+									</tr>
+									<tr>
+										<th class="color-gray" scope="row" width="50%">NIC Number</th>
+										<td scope="row" width="50%">[[${NIC}]]</td>
+									</tr>
+									<tr>
+										<th class="color-gray" scope="row" width="50%">Driving License Number</th>
+										<td scope="row" width="50%">[[${drivingLicense}]]</td>
+									</tr>
+									<tr>
+										<th class="color-gray" scope="row" width="50%">Passport Number</th>
+										<td scope="row" width="50%">[[${passport}]]</td>
+									</tr>
+									<tr>
+										<th class="color-gray" scope="row" width="50%">Profession</th>
+										<td scope="row" width="50%">[[${profession}]]</td>
+									</tr>
+									<tr>
+										<th class="color-gray" scope="row" width="50%">Employer Name</th>
+										<td scope="row" width="50%">[[${employerName}]]</td>
+									</tr>
+									<tr>
+										<th class="color-gray" scope="row" width="50%">Permanent Address</th>
+										<td scope="row" width="50%">[[${permenantAddress}]]</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td width="50%" style="padding-left: 30px;">
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th class="color-red" scope="col" colspan="4" width="100%">Relationship Details</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th class="color-gray" scope="row" width="10%" style="text-align: center">No</th>
+										<th class="color-gray" scope="row" width="30%" style="text-align: center">Related Entity ID Details</th>
+										<th class="color-gray" scope="row" width="40%" style="text-align: center">Related Entity Name</th>
+										<th class="color-gray" scope="row" width="20%" style="text-align: center">Nature of Relationship</th>
+									</tr>
+									<tr th:each="relationshipDetails : ${relationshipDetails}">						
+										<td scope="row" width="10%" th:text="${relationshipDetails.getR_NO()}" style="text-align: center"></td>
+										<td scope="row" width="30%" th:text="${relationshipDetails.getRELATED_ENTITY_ID_DETAILS()}"></td>
+										<td scope="row" width="40%" th:text="${relationshipDetails.getRELATED_ENTITY_NAME()}"></td>
+										<td scope="row" width="20%" th:text="${relationshipDetails.getNATURE_OF_RELATIONSHIP()}"></td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</table>
+				<br></br><br></br>
+			</div>
+			<div class="w-50">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th class="color-red" scope="col" colspan="2" width="100%">Dishonoured Cheques Summary</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="color-gray" scope="row" width="50%" style="text-align: center">Number of Cheques Dishonoured</th>
+							<th class="color-gray" scope="row" width="50%" style="text-align: center">Total Amount</th>
+						</tr>
+						<tr th:each="dishonChequesSummary : ${dishonChequesSummary}">						
+							<td scope="row" width="50%" th:text="${dishonChequesSummary.getNumberOfCheques()}" style="text-align: right"></td>
+							<td scope="row" width="50%" th:text="${dishonChequesSummary.getTotalAmount()}" style="text-align: right"></td>
+						</tr>
+					</tbody>
+				</table>
+				<br></br><br></br>
+			</div>
+			<div class="w-50">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th class="color-red" scope="col" colspan="4" width="100%">Credit Facility Summary</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="color-gray" scope="row" width="35%" style="text-align: center">Type Of Liability</th>
+							<th class="color-gray" scope="row" width="15%" style="text-align: center">Total No Of Facilities</th>
+							<th class="color-gray" scope="row" width="25%" style="text-align: center">Total Amount Granted Limit</th>
+							<th class="color-gray" scope="row" width="25%" style="text-align: center">Total Outstanding</th>
+						</tr>
+						<tr th:each="CFSummary : ${CFSummary}">						
+							<td scope="row" width="35%" th:text="${CFSummary.getTypeOfLiabilities()}"></td>
+							<td scope="row" width="15%" th:text="${CFSummary.getTotalNumberOfFacilities()}" style="text-align: right"></td>
+							<td scope="row" width="25%" th:text="${CFSummary.getTotalAmountGrantedLimit()}" style="text-align: right"></td>
+							<td scope="row" width="25%" th:text="${CFSummary.getTotalOutstanding()}" style="text-align: right"></td>
+						</tr>
+					</tbody>
+				</table>
+				<br></br><br></br>
+			</div>
+			<div class="w-75">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th class="color-red" scope="col" colspan="6" width="100%">Summary of Credit Facilities at a Glance (Excluding Settlements)</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="color-gray" scope="row" width="20%" rowspan="2" style="text-align: center">Credit Facility Status</th>
+							<th class="color-gray" scope="row" width="80%" colspan="5" style="text-align: center">Number of Days in Arrears (NDIA)</th>
+						</tr>
+						<tr>
+							<th class="color-gray" scope="row" width="16%" style="text-align: center">0</th>
+							<th class="color-gray" scope="row" width="16%" style="text-align: center">1 - 30</th>
+							<th class="color-gray" scope="row" width="16%" style="text-align: center">31 - 60</th>
+							<th class="color-gray" scope="row" width="16%" style="text-align: center">61 - 90</th>
+							<th class="color-gray" scope="row" width="16%" style="text-align: center">Over 90</th>
+						</tr>
+						<tr th:each="summaryOfCFAtGlance : ${summaryOfCFAtGlance}">						
+							<td scope="row" width="20%" th:text="${summaryOfCFAtGlance.getSTATUS()}"></td>
+							<td scope="row" width="16%" th:text="${summaryOfCFAtGlance.getARREAS_DAYS()}" style="text-align: right"></td>
+							<td scope="row" width="16%" th:text="${summaryOfCFAtGlance.getARREAS_DAYS_1_30()}" style="text-align: right"></td>
+							<td scope="row" width="16%" th:text="${summaryOfCFAtGlance.getARREAS_DAYS_31_60()}" style="text-align: right"></td>
+							<td scope="row" width="16%" th:text="${summaryOfCFAtGlance.getARREAS_DAYS_61_90()}" style="text-align: right"></td>
+							<td scope="row" width="16%" th:text="${summaryOfCFAtGlance.getARREAS_DAYS_OVER_90()}" style="text-align: right"></td>
+						</tr>
+					</tbody>
+				</table>
+				<br></br><br></br>
+			</div>	
+			<div class="w-100">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th class="color-red" scope="col" colspan="18" width="100%">Credit Facility (CF) Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="color-gray" scope="row" width="2%" style="text-align: center">No</th>
+							<th class="color-gray" scope="row" width="5%" style="text-align: center">Inst Catg</th>
+							<th class="color-gray" scope="row" width="5%" style="text-align: center">Inst Branch</th>
+							<th class="color-gray" scope="row" width="5%" style="text-align: center">CF Type</th>
+							<th class="color-gray" scope="row" width="5%" style="text-align: center">CF Status</th>
+							<th class="color-gray" scope="row" width="5%" style="text-align: center">Ownership</th>
+							<th class="color-gray" scope="row" width="5%" style="text-align: center">Currency</th>
+							<th class="color-gray" scope="row" width="5%" style="text-align: center">Amount Granted / Limit</th>
+							<th class="color-gray" scope="row" width="5%" style="text-align: center">Current Balance</th>
+							<th class="color-gray" scope="row" width="5%" style="text-align: center">Arrears Amount</th>
+							<th class="color-gray" scope="row" width="5%" style="text-align: center">Installment Amount</th>
+							<th class="color-gray" scope="row" width="5%" style="text-align: center">Amount Written Off</th>
+							<th class="color-gray" scope="row" width="5%" style="text-align: center">Reported Date</th>
+							<th class="color-gray" scope="row" width="5%" style="text-align: center">First Disburse Date</th>
+							<th class="color-gray" scope="row" width="5%" style="text-align: center">Latest Payment Date</th>
+							<th class="color-gray" scope="row" width="5%" style="text-align: center">Restruct Date</th>
+							<th class="color-gray" scope="row" width="5%" style="text-align: center">End Date</th>
+							<th class="color-gray" scope="row" width="5%" style="text-align: center">Repay Type</th>
+						</tr>
+						<tr th:each="creditFacilityDetails : ${creditFacilityDetails}">						
+							<td scope="row" width="2%" th:text="${creditFacilityDetails.getCF_NO()}" style="text-align: center"></td>
+							<td scope="row" width="5%" th:text="${creditFacilityDetails.getINSTITUTION_CATG()}"></td>
+							<td scope="row" width="5%" th:text="${creditFacilityDetails.getINSTITUTION_BRANCH()}"></td>
+							<td scope="row" width="5%" th:text="${creditFacilityDetails.getCF_TYPE()}"></td>
+							<td scope="row" width="5%" th:text="${creditFacilityDetails.getCF_STAT()}"></td>
+							<td scope="row" width="5%" th:text="${creditFacilityDetails.getOWNERSHIP()}"></td>
+							<td scope="row" width="5%" th:text="${creditFacilityDetails.getCURRENCY()}"></td>
+							<td scope="row" width="5%" th:text="${creditFacilityDetails.getAMOUNT_GRANTED()}" style="text-align: right"></td>
+							<td scope="row" width="5%" th:text="${creditFacilityDetails.getCURRENT_BALANCE()}" style="text-align: right"></td>
+							<td scope="row" width="5%" th:text="${creditFacilityDetails.getARREAS_AMOUNT()}" style="text-align: right"></td>
+							<td scope="row" width="5%" th:text="${creditFacilityDetails.getINSTALLMENT_AMOUNT()}" style="text-align: right"></td>
+							<td scope="row" width="5%" th:text="${creditFacilityDetails.getAMOUNT_WRITTEN_OFF()}" style="text-align: right"></td>
+							<td scope="row" width="5%" th:text="${creditFacilityDetails.getREPORTED_DATE()}"></td>
+							<td scope="row" width="5%" th:text="${creditFacilityDetails.getFIRST_DISBURSE_DATE()}"></td>
+							<td scope="row" width="5%" th:text="${creditFacilityDetails.getLATEST_PAYMENT_DATE()}"></td>
+							<td scope="row" width="5%" th:text="${creditFacilityDetails.getRESTRUCTURING_DATE()}"></td>
+							<td scope="row" width="5%" th:text="${creditFacilityDetails.getEND_DATE()}"></td>
+							<td scope="row" width="5%" th:text="${creditFacilityDetails.getREPAY_TYPE()}"></td>
+						</tr>
+					</tbody>
+				</table>
+				<br></br><br></br>
+				<table class="table table-bordered">
+					<tbody>
+						<tr>
+							<th class="color-gray" scope="row" width="4%" rowspan="2" style="text-align: center">No</th>
+							<th class="color-gray" scope="row" width="10%" rowspan="2" style="text-align: center">Purpose</th>
+							<th class="color-gray" scope="row" width="10%" rowspan="2" style="text-align: center">Coverage</th>
+							<th class="color-gray" scope="row" width="30%" colspan="3" style="text-align: center">Number of instances arrears in last 24 months</th>
+						</tr>
+						<tr>			
+							<th class="color-gray" scope="row" width="10%" style="text-align: center">Between 0-15 days</th>
+							<th class="color-gray" scope="row" width="10%" style="text-align: center">Between 16-60 days</th>
+							<th class="color-gray" scope="row" width="10%" style="text-align: center">More than 61 days</th>
+						</tr>
+						<tr th:each="creditFacilityDetails : ${creditFacilityDetails}">						
+							<td scope="row" width="4%" th:text="${creditFacilityDetails.getCF_NO()}" style="text-align: center"></td>
+							<td scope="row" width="10%" th:text="${creditFacilityDetails.getPURP()}"></td>
+							<td scope="row" width="10%" th:text="${creditFacilityDetails.getCOVERAGE()}"></td>
+							<td scope="row" width="10%" th:text="${creditFacilityDetails.getBetween0_15Days()}" style="text-align: right"></td>
+							<td scope="row" width="10%" th:text="${creditFacilityDetails.getBetween16_60Days()}" style="text-align: right"></td>
+							<td scope="row" width="10%" th:text="${creditFacilityDetails.getBetween61Days()}" style="text-align: right"></td>
+						</tr>
+					</tbody>
+				</table>
+				<br></br><br></br>
+			</div>	
+		</div>
+		<div class="container mt-5 p-5 bg-white" style="page-break-before: always;" th:if="${scoreRequired}">
+			<table width="100%" style="border: 1px solid #dee2e6">
+				<tbody>
+					<tr>
+						<td style="padding-left: 30px; text-align: center">
+							<div class="mr-auto ml-4">
+								<p class="color-light"><strong style="font-size: 16px;">Specimen Consumer CRIB Score Report</strong></p>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<br></br><br></br><br></br>
+			<div class="w-50">
+				<table class="table table-bordered">
+					<tbody>
+						<tr>
+							<th class="color-gray" scope="row" width="50%">Report Order Number</th>
+							<td scope="row" width="50%">[[${scoreGeneralDetail.getReportOrderNumber()}]]</td>
+						</tr>
+						<tr>
+							<th class="color-gray" scope="row" width="50%">Report Order Date</th>
+							<td scope="row" width="50%">[[${scoreGeneralDetail.getReportOrderdate()}]]</td>
+						</tr>
+					</tbody>
+				</table>
+				<br></br><br></br>
+			</div>
+			<div class="w-100">
+				<table width="100%">
+					<tr style="vertical-align:top">
+						<td>
+							<table class="table">
+								<thead>
+									<tr>
+										<th scope="col" colspan="2" style="border:none; background:#cccccc">Score</th>
+									</tr>
+								</thead>
+							</table>
+							<table>
+								<tbody>		
+									<tr>
+										<td style="border:none; width: 120px; padding: 15px 8px 3px 8px;"><b>CRIB Risk Grade</b></td>
+										<td style="border:none; width: 120px; padding: 15px 8px 3px 8px; text-align:center"><span th:style="@{${cribScore.getRiskGradeColor()}}">[[${cribScore.getRiskGrade()}]]</span></td>
+									</tr>
+									<tr>
+										<td style="border:none; width: 120px; padding: 8px;"><b>CRIB Score</b></td>
+										<td style="border:none; width: 120px; padding: 8px; text-align:center"><b>[[${cribScore.getCribScore()}]]</b></td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td>
+							<table class="table">
+								<thead>
+									<tr>
+										<th scope="col" colspan="2" style="border:none; background:#cccccc">Observation(s)</th>
+									</tr>
+								</thead>
+							</table>
+							<table>
+								<tbody>		
+									<tr th:each="scoreObservations : ${scoreObservations}">
+										<td style="border:none; width: 120px; padding: 8px 8px 0px 8px; font-weight: bold" th:text="${scoreObservations.getCode()}"></td>
+										<td style="border:none; padding: 8px 30px 0px 8px;" th:text="${scoreObservations.getStatement()}"></td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</table>	
+				<br></br><br></br><br></br>	
+			</div>
+			<div class="w-100">
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col" colspan="2" style="border:none; background:#cccccc">Scoring Legend</th>
+						</tr>
+					</thead>
+				</table>
+				<table width="100%">
+					<tbody>		
+						<tr>
+							<td>
+								<table width="100%" style="text-align: center">
+									<tr>
+										<td><h3 style="color: #c00000;">250</h3></td>
+										<td><h3 style="color: #c00000;">251</h3></td>
+										<td><h3 style="color: #c00000;">480</h3></td>
+										<td><h3 style="color: #ff5d5d;">500</h3></td>
+										<td><h3 style="color: #ff5d5d;">520</h3></td>
+										<td><h3 style="color: #ff5d5d;">540</h3></td>
+										<td><h3 style="color: #ffc000;">550</h3></td>
+										<td><h3 style="color: #ffc000;">560</h3></td>
+										<td><h3 style="color: #ffc000;">570</h3></td>
+										<td><h3 style="color: #83bb5d;">580</h3></td>
+										<td><h3 style="color: #83bb5d;">590</h3></td>
+										<td><h3 style="color: #83bb5d;">600</h3></td>
+										<td><h3 style="color: #3c5c26;">610</h3></td>
+										<td><h3 style="color: #3c5c26;">620</h3></td>
+										<td><h3 style="color: #3c5c26;">640</h3></td>
+									</tr>
+									<tr>
+										<td><div class="circle" style="background:#c00000">E3</div></td>
+										<td><div class="circle" style="background:#c00000">E2</div></td>
+										<td><div class="circle" style="background:#c00000">E1</div></td>
+										<td><div class="circle" style="background:#ff5d5d">D3</div></td>
+										<td><div class="circle" style="background:#ff5d5d">D2</div></td>
+										<td><div class="circle" style="background:#ff5d5d">D1</div></td>
+										<td><div class="circle" style="background:#ffc000">C3</div></td>
+										<td><div class="circle" style="background:#ffc000">C2</div></td>
+										<td><div class="circle" style="background:#ffc000">C1</div></td>
+										<td><div class="circle" style="background:#83bb5d">B3</div></td>
+										<td><div class="circle" style="background:#83bb5d">B2</div></td>
+										<td><div class="circle" style="background:#83bb5d">B1</div></td>
+										<td><div class="circle" style="background:#3c5c26">A3</div></td>
+										<td><div class="circle" style="background:#3c5c26">A2</div></td>
+										<td><div class="circle" style="background:#3c5c26">A1</div></td>
+									</tr>
+								</table>
+							</td>							
+						</tr>
+						<tr>
+							<td style="padding: 30px 0 0 7px;">
+								<table width="100%">
+									<tr>
+										<td style="background: #3c5c26; color: white; text-align: center; padding: 5px 15px 5px 15px; font-weight:bold">A1 - A3</td>
+										<td style="padding: 0px 20px 0px 15px"><b>VERY LOW RISK</b></td>
+										<td>- BASED ON CREDIT HISTORIES</td>
+									</tr>
+									<tr>
+										<td style="background: #83bb5d; color: white; text-align: center; padding: 5px 15px 5px 15px; font-weight:bold">B1 - B3</td>
+										<td style="padding: 0px 20px 0px 15px"><b>LOW RISK</b></td>
+										<td>- BASED ON TIMELY PAYMENT BEHAVIOR</td>
+									</tr>
+									<tr>
+										<td style="background: #ffc000; color: white; text-align: center; padding: 5px 15px 5px 15px; font-weight:bold">C1 - C3</td>
+										<td style="padding: 0px 20px 0px 15px"><b>AVERAGE RISK</b></td>
+										<td>- BASED ON IRREGULARITIES IN REPAYMENT OR OVER INDEBTEDNESS</td>
+									</tr>
+									<tr>
+										<td style="background: #ff5d5d; color: white; text-align: center; padding: 5px 15px 5px 15px; font-weight:bold">D1 - D3</td>
+										<td style="padding: 0px 20px 0px 15px"><b>HIGH RISK</b></td>
+										<td>- BASED ON HIGH PROBABILITY OF DEFAULTING ON A CREDIT FACILITY</td>
+									</tr>
+									<tr>
+										<td style="background: #c00000; color: white; text-align: center; padding: 5px 15px 5px 15px; font-weight:bold">E1 - E3</td>
+										<td style="padding: 0px 20px 0px 15px"><b>VERY HIGH RISK </b></td>
+										<td>- BASED ON DEFAULT OR EXTREME IRREGULARITIES IN SERVICING CREDIT FACILITIES</td>
+									</tr>
+									<tr>
+										<td style="background: #808080; color: white; text-align: center; padding: 5px 15px 5px 15px; font-weight:bold">XX</td>
+										<td style="padding: 0px 20px 0px 15px"><b>NOT SCORED</b></td>
+										<td>- INSUFFICIENT INFORMATION IN THE DATABASE</td>
+									</tr>
+								</table>
+							</td>							
+						</tr>
+					</tbody>
+				</table>
+				<br></br><br></br>
+				<div class="w-100">
+					<b>DISCLAIMER:</b> ALL DATA/INFORMATION/DESCRIPTIONS STATED IN THIS SCORE REPORT ARE FOR ILLUSTRATIVE/INFORMATIVE PURPOSES ONLY AND SHOULD NOT BE CONSTRUED AS ANY PROFESSIONAL 
+					Advice/OPINION OF CRIB ON THE CREDITWORTHINESS OR SUITABILITY OF THE SUBJECT(S) FOR ANY INTENDED CREDIT FACILITY. USE OF DATA/INFORMATION/DESCRIPTIONS GIVEN IN THIS REPORT IS ENTIRELY AT 
+					THE DISCRETION OF THE FINANCIAL INSTITUTION/USER. LENDING INSTITUTIONS/USERS ARE STRICTLY ADVISED AND CAUTIONED TO PERFORM THEIR OWN DUE DILIGENCE AND EVALUATION WITH REGARD TO THE 
+					SUBJECT(S) PRIOR TO ARRIVING AT A DECISION. IN NO EVENT SHALL CRIB OR ANY OF ITS OFFICERS/EMPLOYEES/AGENTS BE LIABLE TO YOU OR ANYONE ELSE FOR ANY DECISION MADE OR ANY ACTION TAKEN IN 
+					RELIANCE ON THE DATA/INFORMATION/DESCRIPTIONS GIVEN IN THIS REPORT.
+				</div>
+				<br></br><br></br>
+			</div>		
+		</div>
+	</section>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+</body>
+</html>

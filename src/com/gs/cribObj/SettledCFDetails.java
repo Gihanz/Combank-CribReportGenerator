@@ -1,0 +1,85 @@
+package com.gs.cribObj;
+
+public class SettledCFDetails {
+
+	private String CURRENCY;
+	private String CF_TYPE;
+	private String NO_OF_CREDIT_FACILITIES_AS_BORROWER;
+	private String AMOUNT_GRANTED_AS_BORROWER;
+	private String NO_OF_CREDIT_FACILITIES_AS_GUARANTOR;
+	private String AMOUNT_GRANTED_AS_GUARANTOR;
+	
+	/**
+	 * @return the cURRENCY
+	 */
+	public String getCURRENCY() {
+		return CURRENCY;
+	}
+	/**
+	 * @param cURRENCY the cURRENCY to set
+	 */
+	public void setCURRENCY(String cURRENCY) {
+		CURRENCY = cURRENCY;
+	}
+	/**
+	 * @return the cF_TYPE
+	 */
+	public String getCF_TYPE() {
+		return CF_TYPE;
+	}
+	/**
+	 * @param cF_TYPE the cF_TYPE to set
+	 */
+	public void setCF_TYPE(String cF_TYPE) {
+		CF_TYPE = cF_TYPE;
+	}
+	/**
+	 * @return the nO_OF_CREDIT_FACILITIES_AS_BORROWER
+	 */
+	public String getNO_OF_CREDIT_FACILITIES_AS_BORROWER() {
+		return NO_OF_CREDIT_FACILITIES_AS_BORROWER;
+	}
+	/**
+	 * @param nO_OF_CREDIT_FACILITIES_AS_BORROWER the nO_OF_CREDIT_FACILITIES_AS_BORROWER to set
+	 */
+	public void setNO_OF_CREDIT_FACILITIES_AS_BORROWER(String nO_OF_CREDIT_FACILITIES_AS_BORROWER) {
+		NO_OF_CREDIT_FACILITIES_AS_BORROWER = nO_OF_CREDIT_FACILITIES_AS_BORROWER;
+	}
+	/**
+	 * @return the aMOUNT_GRANTED_AS_BORROWER
+	 */
+	public String getAMOUNT_GRANTED_AS_BORROWER() {
+		return AMOUNT_GRANTED_AS_BORROWER;
+	}
+	/**
+	 * @param aMOUNT_GRANTED_AS_BORROWER the aMOUNT_GRANTED_AS_BORROWER to set
+	 */
+	public void setAMOUNT_GRANTED_AS_BORROWER(String aMOUNT_GRANTED_AS_BORROWER) {
+		AMOUNT_GRANTED_AS_BORROWER = aMOUNT_GRANTED_AS_BORROWER;
+	}
+	/**
+	 * @return the nO_OF_CREDIT_FACILITIES_AS_GUARANTOR
+	 */
+	public String getNO_OF_CREDIT_FACILITIES_AS_GUARANTOR() {
+		return NO_OF_CREDIT_FACILITIES_AS_GUARANTOR;
+	}
+	/**
+	 * @param nO_OF_CREDIT_FACILITIES_AS_GUARANTOR the nO_OF_CREDIT_FACILITIES_AS_GUARANTOR to set
+	 */
+	public void setNO_OF_CREDIT_FACILITIES_AS_GUARANTOR(String nO_OF_CREDIT_FACILITIES_AS_GUARANTOR) {
+		NO_OF_CREDIT_FACILITIES_AS_GUARANTOR = nO_OF_CREDIT_FACILITIES_AS_GUARANTOR;
+	}
+	/**
+	 * @return the aMOUNT_GRANTED_AS_GUARANTOR
+	 */
+	public String getAMOUNT_GRANTED_AS_GUARANTOR() {
+		return AMOUNT_GRANTED_AS_GUARANTOR;
+	}
+	/**
+	 * @param aMOUNT_GRANTED_AS_GUARANTOR the aMOUNT_GRANTED_AS_GUARANTOR to set
+	 */
+	public void setAMOUNT_GRANTED_AS_GUARANTOR(String aMOUNT_GRANTED_AS_GUARANTOR) {
+		AMOUNT_GRANTED_AS_GUARANTOR = aMOUNT_GRANTED_AS_GUARANTOR;
+	}
+	 
+}
