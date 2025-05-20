@@ -1,5 +1,5 @@
 package com.gs.consAnalysisObj;
-jjjjjjjjjjjj
+
 public class CFDetails {
 
 	private String CF_NO;
