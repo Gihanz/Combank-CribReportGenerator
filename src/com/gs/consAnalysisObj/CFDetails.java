@@ -1,4 +1,4 @@
-ssspackage com.gs.consAnalysisObj;
+package com.gs.consAnalysisObj;
 
 public class CFDetails {
 
